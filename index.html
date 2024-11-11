@@ -34,7 +34,13 @@ features:
     paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam repellat error voluptatum porro totam, exercitationem at distinctio facere molestiae quisquam quas illum accusantium autem, ab perferendis incidunt omnis cumque!
   - heading: Heading
     paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam repellat error voluptatum porro totam, exercitationem at distinctio facere molestiae quisquam quas illum accusantium autem, ab perferendis incidunt omnis cumque!
-
+article-highlight:
+  article-image: https://images.unsplash.com/photo-1517519014922-8fc06b814a0e?q=80&w=2755&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  image-by: some legend
+  article-title: Article Title
+  paragraph-1: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error quia veritatis et aspernatur sed, quas vero distinctio tenetur voluptatibus, nihil facere voluptatem, dolor sapiente quisquam labore eaque commodi odio. Voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum temporibus tempora similique. Hic, ab! Quae reprehenderit nisi quam alias deleniti sequi nihil asperiores, exercitationem fugiat perspiciatis commodi. Rem, excepturi.
+  paragraph-2: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error quia veritatis et aspernatur sed, quas vero distinctio tenetur voluptatibus, nihil facere voluptatem, dolor sapiente quisquam labore eaque commodi odio. Voluptates. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ex a tenetur iste error consequuntur minus soluta, enim delectus laborum quo ea obcaecati, illo nostrum blanditiis adipisci dicta, in recusandae?
+  button-text: Contact Us
 ---
 
 <!------------------------------------------------------- Image Gallery Section ---------------------------------------->
@@ -56,7 +62,7 @@ features:
 </section>
 
 
-  <!------------------------------------------------------- Features Section ---------------------------------------->
+<!------------------------------------------------------- Features Section ---------------------------------------->
 <section class="container mx-auto px-8 my-10">
   <div class="grid lg:grid-cols-2 gap-x-10 gap-y-20 my-8">
 
@@ -69,20 +75,19 @@ features:
   </div>
 </section>
 
-<!------------------------------------------------------- Text Image Section ---------------------------------------->
+<!------------------------------------------------------- Article Highlight Section ---------------------------------------->
 <section class="container mx-auto px-8 min-h-screen flex flex-col my-20">
-    <div class="grid md:grid-cols-2 grow gap-7">
-        <div class="relative h-80 md:h-full">
-            <!-- Absolute positioning has img behave like bg-image -->
-            <img class="object-cover absolute top-0 left-0 w-full h-full object-bottom -scale-x-100" src="https://images.unsplash.com/photo-1517519014922-8fc06b814a0e?q=80&w=2755&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <p class="absolute -left-6 bottom-0 sideways-text font-extralight text-xs">Credit: some legend</p>
-          </div>
-      <div class="self-end">
-        <h3 class="uppercase font-bold text-3xl ">Article Title</h3>
-        <p class="font-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error quia veritatis et aspernatur sed, quas vero distinctio tenetur voluptatibus, nihil facere voluptatem, dolor sapiente quisquam labore eaque commodi odio. Voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum temporibus tempora similique. Hic, ab! Quae reprehenderit nisi quam alias deleniti sequi nihil asperiores, exercitationem fugiat perspiciatis commodi. Rem, excepturi.</p>
-        <p class="font-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error quia veritatis et aspernatur sed, quas vero distinctio tenetur voluptatibus, nihil facere voluptatem, dolor sapiente quisquam labore eaque commodi odio. Voluptates. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ex a tenetur iste error consequuntur minus soluta, enim delectus laborum quo ea obcaecati, illo nostrum blanditiis adipisci dicta, in recusandae?</p>
-        <button class="bg-white text-navy px-5 py-1 text-sm uppercase hover:bg-focus hover:text-white">Contact Us</button>
-      </div>
-      
+  <div class="grid md:grid-cols-2 grow gap-7">
+      <div class="relative h-80 md:h-full">
+          <!-- Absolute positioning has img behave like bg-image -->
+          <img class="object-cover absolute top-0 left-0 w-full h-full object-bottom -scale-x-100" src="{{page.article-highlight.article-image}}">
+          <p class="absolute -left-6 bottom-0 sideways-text font-extralight text-xs">Credit: {{page.article-highlight.image-by}}</p>
+        </div>
+    <div class="self-end">
+      <h3 class="uppercase font-bold text-3xl ">{{page.article-highlight.article-title}}</h3>
+      <p class="font-light">{{page.article-highlight.paragraph-1}}</p>
+      <p class="font-light">{{page.article-highlight.paragraph-2}}</p>
+      <button class="bg-white text-navy px-5 py-1 text-sm uppercase hover:bg-focus hover:text-white">{{page.article-highlight.button-text}}</button>
     </div>
-  </section>
+  </div>
+</section>
