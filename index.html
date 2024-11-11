@@ -22,7 +22,19 @@ gallery:
     - image: https://plus.unsplash.com/premium_photo-1664303466454-b8ddd4943be4?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       alt: Pink Dog
       focus: center
-        
+fun-heading:
+  heading-line-1: This is a
+  heading-line-2: fun heading
+features:
+  - heading: Heading
+    paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam repellat error voluptatum porro totam, exercitationem at distinctio facere molestiae quisquam quas illum accusantium autem, ab perferendis incidunt omnis cumque!
+  - heading: Heading
+    paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam repellat error voluptatum porro totam, exercitationem at distinctio facere molestiae quisquam quas illum accusantium autem, ab perferendis incidunt omnis cumque!
+  - heading: Heading
+    paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam repellat error voluptatum porro totam, exercitationem at distinctio facere molestiae quisquam quas illum accusantium autem, ab perferendis incidunt omnis cumque!
+  - heading: Heading
+    paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam repellat error voluptatum porro totam, exercitationem at distinctio facere molestiae quisquam quas illum accusantium autem, ab perferendis incidunt omnis cumque!
+
 ---
 
 <!------------------------------------------------------- Image Gallery Section ---------------------------------------->
@@ -36,36 +48,26 @@ gallery:
 
         {% endfor %}
     </div>
-  </section>
+</section>
 
-
-  <!------------------------------------------------------- Fun Heading---------------------------------------->
+<!------------------------------------------------------- Fun Heading---------------------------------------->
 <section class="container mx-auto px-8 py-10">
-    <h1 class="text-5xl lg:text-6xl uppercase font-extrabold text-right">This is a <br>fun heading</h1>
+    <h1 class="text-5xl lg:text-6xl uppercase font-extrabold text-right">{{page.fun-heading.heading-line-1}} <br>{{page.fun-heading.heading-line-2}}</h1>
 </section>
 
 
-  <!------------------------------------------------------- Text Column Section ---------------------------------------->
+  <!------------------------------------------------------- Features Section ---------------------------------------->
 <section class="container mx-auto px-8 my-10">
-    <div class="grid lg:grid-cols-2 gap-x-10 gap-y-20 my-8">
-      <div>
-        <h2 class="font-bold uppercase text-5xl text-center text-byellow">Heading</h2>
-        <p class="font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quo aliquid, voluptate possimus, odio consequatur voluptatum a ad tempora, ullam praesentium omnis numquam dolorem itaque dolorum. Similique quod illum optio.</p>
-      </div>
-      <div>
-        <h2 class="font-bold uppercase text-5xl text-center text-byellow">Heading</h2>
-        <p class="font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quo aliquid, voluptate possimus, odio consequatur voluptatum a ad tempora, ullam praesentium omnis numquam dolorem itaque dolorum. Similique quod illum optio.</p>
-      </div>
-      <div>
-        <h2 class="font-bold uppercase text-5xl text-center text-byellow">Heading</h2>
-        <p class="font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quo aliquid, voluptate possimus, odio consequatur voluptatum a ad tempora, ullam praesentium omnis numquam dolorem itaque dolorum. Similique quod illum optio.</p>
-      </div>
-      <div>
-        <h2 class="font-bold uppercase text-5xl text-center text-byellow">Heading</h2>
-        <p class="font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quo aliquid, voluptate possimus, odio consequatur voluptatum a ad tempora, ullam praesentium omnis numquam dolorem itaque dolorum. Similique quod illum optio.</p>
-      </div>
+  <div class="grid lg:grid-cols-2 gap-x-10 gap-y-20 my-8">
+
+    {% for item in page.features %}
+    <div>
+      <h2 class="font-bold uppercase text-5xl text-center text-byellow">{{item.heading}}</h2>
+      <p class="font-light">{{item.paragraph}}</p>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
 
 <!------------------------------------------------------- Text Image Section ---------------------------------------->
 <section class="container mx-auto px-8 min-h-screen flex flex-col my-20">
