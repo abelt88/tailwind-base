@@ -7,7 +7,13 @@ module.exports = {
     './*.{html,js,md}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        navy: '#003ea1',
+        bright: '#3A86FF',
+        focus: '#ff006e',
+        byellow: '#ffbe0b',
+    },
   },
   plugins: [],
-}
+}}

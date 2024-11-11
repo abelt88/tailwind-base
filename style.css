@@ -9,3 +9,41 @@
 @tailwind utilities;
 
 /* Custom CSS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Utility Class */
+  
+  body {
+    font-family: 'Lato', sans-serif;
+  
+  }
+  
+  #fancy {
+    font-family: "Flavors", 'Lato', sans-serif;
+  }
+
+  body h1, body h2, body h3, body h4 {
+    margin-bottom: 1rem;
+  }
+  
+  h1:last-child),
+  h2:last-child),
+  h3:last-child),
+  h4:last-child) {
+    margin-bottom: 1em;
+  }
+  
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  .sideways-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    /* text-orientation: sideways-right; */
+  }
