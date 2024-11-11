@@ -10,6 +10,8 @@
 
 /* Custom CSS */
 
+/* CSS Reset */
+
 *{
     padding: 0;
     margin: 0;
@@ -17,13 +19,20 @@
   }
   
   /* Utility Class */
+
+  .sideways-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    /* text-orientation: sideways-right; */
+  }
+
+  /* Typography */
   
   body {
     font-family: 'Lato', sans-serif;
-  
   }
   
-  #fancy {
+  .fancy-font {
     font-family: "Flavors", 'Lato', sans-serif;
   }
 
@@ -42,8 +51,7 @@
     margin-bottom: 1rem;
   }
   
-  .sideways-text {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    /* text-orientation: sideways-right; */
-  }
+
+
+
+  

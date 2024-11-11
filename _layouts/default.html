@@ -14,6 +14,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Flavors&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+<style>
+
+    :root{
+        --focus-color: {{site.data.site-settings.focus-color}};
+    }
+</style>
+
 </head>
 
 <body class="bg-bright text-white">
@@ -62,7 +69,7 @@
           <label class="uppercase sr-only" for="_replyto"> Email </label>
           <input class="border-2 border-white bg-bright focus:border-focus outline-none py-1 px-2 placeholder:text-white placeholder:opacity-30" type="email" name="_replyto" id="_replyto" placeholder="Email" />
           <div class="">
-              <button class="bg-white text-navy px-5 py-1 text-sm uppercase hover:bg-focus hover:text-white my-4" type="submit">Sign Up</button>
+              <button class="bg-white text-navy px-5 py-1 text-sm uppercase {% if site.data.site-settings.footer-button.color == 'pink' %} hover:bg-focus {% elsif site.data.site-settings.footer-button.color == 'yellow' %} hover:bg-byellow {% else %} hover:bg-[#272]  {% endif %} hover:text-white my-4" type="submit">Sign Up</button>
           </div>
         </form> 
       

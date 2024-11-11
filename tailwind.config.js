@@ -12,6 +12,7 @@ module.exports = {
         navy: '#003ea1',
         bright: '#3A86FF',
         focus: '#ff006e',
+        focus_example: 'var(--focus-color)',
         byellow: '#ffbe0b',
     },
   },
