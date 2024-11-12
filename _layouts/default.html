@@ -27,15 +27,7 @@
 
     <!------------------------------------------------------- Header --------------------------------------------------->
 
-<header class="uppercase font-light container mx-auto px-8 flex flex-col md:flex-row md:justify-between items-center border-b-2 border-b-white">
-    <a href="/index.html" class=""> Name of Company</a>
-    <nav class="flex gap-3">
-      <a href="/figma.html" class="inline-block p-1 hover:bg-focus">Figma</a>
-      <a href="/rounded.html" class="inline-block p-1 hover:bg-focus">Round</a>
-      <a href="#" class="inline-block p-1 hover:bg-focus">Nav 3</a>
-      <a href="#" class="inline-block p-1 hover:bg-focus">Nav 4</a>
-    </nav>
-  </header>
+{% include header.html %}
   
 {% for blocks in page.blocks %}
 
@@ -47,39 +39,7 @@
 
     <!------------------------------------------------------- Footer Section ---------------------------------------->
 
-<footer class="flex justify-between container mx-auto px-8 py-10 uppercase text-sm">
-    <div class="flex gap-10">
-      <div>
-        <h3 class="">Lorem Ipsum</h3>
-        <ul class="font-light space-y-1">
-          <li class="w-36"><a href="#" class="hover:text-byellow hover:font-bold">Dolor sit amet</a></li>
-          <li><a href="#" class="hover:text-byellow hover:font-bold">Consectetur</a></li>
-          <li><a href="#" class="hover:text-byellow hover:font-bold">Adipiscing elit</a></li>
-          <li><a href="#" class="hover:text-byellow hover:font-bold">ed do</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="">Lorem Ipsum</h3>
-        <ul class="font-light space-y-1">
-          <li><a href="#" class="hover:text-byellow hover:font-bold">Dolor sit amet</a></li>
-          <li><a href="#" class="hover:text-byellow hover:font-bold">Consectetur</a></li>
-          <li><a href="#" class="hover:text-byellow hover:font-bold">Adipiscing elit</a></li>
-          <li><a href="#" class="hover:text-byellow hover:font-bold">ed do</a></li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <p>Subscribe to our newsletter</p>
-      <form>
-          <label class="uppercase sr-only" for="_replyto"> Email </label>
-          <input class="border-2 border-white bg-bright focus:border-focus outline-none py-1 px-2 placeholder:text-white placeholder:opacity-30" type="email" name="_replyto" id="_replyto" placeholder="Email" />
-          <div class="">
-              <button class="bg-white text-navy px-5 py-1 text-sm uppercase {% if site.data.site-settings.footer-button.color == 'pink' %} hover:bg-focus {% elsif site.data.site-settings.footer-button.color == 'yellow' %} hover:bg-byellow {% else %} hover:bg-[#272]  {% endif %} hover:text-white my-4" type="submit">Sign Up</button>
-          </div>
-        </form> 
-      
-    </div>
-  </footer>
+{% include footer.html %}
 
 </body>
 
