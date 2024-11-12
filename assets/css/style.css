@@ -783,13 +783,9 @@ video {
   opacity: 0.3;
 }
   
-  .hover\:bg-focus:hover {
+  .hover\:bg-\[\#272\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 110 / var(--tw-bg-opacity));
-}
-  
-  .hover\:bg-focus_example:hover {
-  background-color: var(--focus-color);
+  background-color: rgb(34 119 34 / var(--tw-bg-opacity));
 }
   
   .hover\:bg-byellow:hover {
@@ -797,9 +793,9 @@ video {
   background-color: rgb(255 190 11 / var(--tw-bg-opacity));
 }
   
-  .hover\:bg-\[\#272\]:hover {
+  .hover\:bg-focus:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 119 34 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 110 / var(--tw-bg-opacity));
 }
   
   .hover\:font-bold:hover {
