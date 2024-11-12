@@ -1,9 +1,9 @@
 <section class="container mx-auto px-8 text-center my-10">
     <div class="max-w-4xl mx-auto my-10">
-        <h1 class="text-5xl lg:text-7xl uppercase font-extrabold tracking-widest fancy-font">{{page.gallery.heading}}</h1>  
+        <h1 class="text-5xl lg:text-7xl uppercase font-extrabold tracking-widest fancy-font">{{blocks.heading}}</h1>  
     </div>
-    <div class="grid gap-4 my-8" style="grid-template-columns: repeat({{page.gallery.no_columns}}, minmax(0, 1fr));">
-        {% for item in page.gallery.gallery-images %}
+    <div class="grid gap-4 my-8" style="grid-template-columns: repeat({{blocks.no_columns}}, minmax(0, 1fr));">
+        {% for item in blocks.gallery-images %}
       <img class="aspect-square w-full object-cover" style="object-position: {{item.focus}};" src="{{item.image}}" alt="{{item.alt}}">
 
         {% endfor %}

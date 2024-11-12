@@ -37,8 +37,13 @@
     </nav>
   </header>
   
+{% for blocks in page.blocks %}
 
-    {{content}}
+{% include /blocks/{{blocks.id}}.html %}
+
+{% endfor %}
+
+    <!-- {{content}} -->
 
     <!------------------------------------------------------- Footer Section ---------------------------------------->
 
