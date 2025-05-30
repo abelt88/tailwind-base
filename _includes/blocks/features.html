@@ -1,8 +1,11 @@
 <section class="container mx-auto px-8 my-10">
   <div class="grid lg:grid-cols-2 gap-x-10 gap-y-20 my-8">
 
-    {% for item in blocks.columns %}
+    {% for item in blocks.columns | limit 4 %}
     <div>
+      {% if items.size > 4 and forloop.index == 4 %}
+        <p>See more</p>
+      {% else %}
       <h2 class="font-bold uppercase text-5xl text-center text-byellow">{{item.heading}}</h2>
       <p class="font-light">{{item.paragraph}}</p>
     </div>
